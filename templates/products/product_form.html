@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block bodyblock %}
+    <div class="jumbotron">
+  <h1 class="display-4">Create Products</h1>
+  <p class="lead" >Fill the below form properly(fields with suffix * are mandatory to be filled)</p>
+  <hr class="my-4">
+  <form action="" method="post" autocomplete="off" enctype="multipart/form-data">
+    {% csrf_token %}
+      <div class="row">
+          <div class="col-md-4">
+            {{ form.product_name|as_crispy_field }}
+          </div>
+          <div class="col-md-4">
+            {{ form.category|as_crispy_field }}
+          </div>
+          <div class="col-md-4">
+            {{ form.image|as_crispy_field }}
+          </div>
+      </div>
+      {{ form.description|as_crispy_field }}
+      {{ form.tags|as_crispy_field }}
+      <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+{% endblock %}

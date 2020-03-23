@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block bodyblock %}
+    {% if form.error %}
+        <h3>Something went wrong Please enter again</h3>
+    {% endif %}
+
+    {% if next %}
+        <h3>You can't access this page</h3>
+    {% endif %}
+    <form method="POST" action="{% url 'login' %}">
+    {% csrf_token %}
+        <center>
+       <p>Username {{ form.username }} </p>
+       <p>Password {{ form.password }} </p>
+        <input type="submit" value="Login" class="btn btn-success">
+        <center style="display: inline-block;">
+            <input type="hidden" name="next" value="{{ next }}"> or
+            <a class="btn btn-primary" href="/register/">Register</a>
+        </center>
+        </center>
+    </form>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block bodyblock %}
+
+    <h6>[Note : Make Sure You are connected with internet while running the project as I'm using <b>bootstrap4 CDN</b> so that you can get best view of this website]</h6><hr>
+    <h3>Follow the instructions below step by step</h3><hr>
+    <h6>step 1 : click on <b>Admin</b> button and login with superuser credentials </h6>
+    <h6>step 2 : click on Tags model and add some tags and logout from admin-site.</h6>
+
+    
+    <h6>step 3 : come back to home page ( http://localhost:8000 ) and click on <b>Register/Login</b> option in Header. Then click on register and fill the form properly</h6>
+    <h6>step 4 : login with user credential</h6>
+    <h6>step 6 : After login go to <b>Categories</b> on Header. Add Few Categories in that(User need to be logged in to perform CRUD on <b>Categories)</b></h6>
+    <h6>step 7 : After Login You will see <b>Add Product</b> option in Header, just click on it and fill the form properly(You can select multiple tags by pressing "ctrl+select using mouse" )</h6>
+    <h6>step 8 : After adding product You will be redirected to Product List, on the product to see detail view </h6>
+    <h6>step 9 : If User is logged in then he can perform CRUD on the Product </h6>
+
+    <h6>step 10 : If User is not logged in, He/She can see the Product list and details but can not perform CRUD operation<br>(logout and check <b>Product List</b> and <b>Details</b>. non-authenticate user can't see update/delete button in <b>Product detail</b> )</h6><hr>
+    <h3>Admin site</h3>
+    <h6>filter products by category</h6>
+    <h6>search products in search box</h6><hr>
+    
+
+{% endblock %}
